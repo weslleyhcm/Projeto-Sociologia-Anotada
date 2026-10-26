@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kaushan+Script&family=Shadows+Into+Light&family=Shadows+Into+Light+Two&display=swap');
+
+
+:root {
+    --cor0: white;
+    --cor1: #614b9488;
+    --cor2: #A380FF;
+    --cor3: #debe3e83;
+    --cor4: #FFE680;
+
+    --fonte-padrão: arial, verdana, helvetica, sans-serif;  
+    --fonte-destaque: "Kaushan Script", cursive
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: var(--fonte-padrão);
+    background-color:var(--cor2) ;
+}
+
+p {
+
+    margin: 15px 0px;
+    text-align: justify;
+    font-size: 1em;
+    text-indent: 30px;
+    line-height: 2em;
+    padding: 0px 40px;
+}
+
+div.video {
+    background-color: var(--cor1);
+    margin: 20px 20px; 
+    padding: 20px;       
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+div.video iframe {
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    display: block;
+    border-radius: 8px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+header {
+    background-image: linear-gradient(to right, var(--cor1), var(--cor4));
+}
+
+header > h1 {
+    color: var(--cor4);
+    background-color: var(--cor1);
+    min-height: 120px;
+    padding-top: 35px;
+    font-family: var(--fonte-destaque);
+    font-size: 4em;
+    text-shadow: 1px 2px 2px #14082f;
+    text-align: center;
+}
+
+header > h2 {
+    color: var(--cor4);
+    background-color: var(--cor1);
+    font-family: var(--fonte-destaque);
+    font-size: 30px;
+    padding-bottom: 30px;
+    text-shadow: 1px 2px 2px #14082f;
+    text-align: center;
+}
+
+nav {
+    background-color: var(--cor4);
+    padding-bottom: 10px;
+    padding-top: 10px;
+    box-shadow: 0px 7px 7px black;
+}
+
+nav > a {
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.5s;
+
+}
+
+nav > a:hover {
+    background-color: var(--cor2);
+
+}
+main {
+    background-color: white;
+}
+
+article > h1 {
+   background-color: white;
+    padding-top: 10px;
+    text-shadow: 1px 1px 0px #14082f;
+    text-align: left;
+    text-indent: 8px;
+    margin: 15px 15px;
+}
+
+article > aside {
+    background-color: var(--cor4);
+    border-radius: 5px;
+    margin: 15px 15px;
+    text-align: justify;
+    font-size: 1em;
+    text-indent: 30px;
+    line-height: 2em;
+    padding: 0px 40px;
+}
+ul {
+    text-align: left;
+}
+
+footer {
+    background-color: var(--cor1);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
