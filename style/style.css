@@ -54,7 +54,7 @@ div.video iframe {
 }
 
 header {
-    background-image: linear-gradient(to right, var(--cor1), var(--cor4));
+    background-image: #350493;
 }
 
 header > h1 {
