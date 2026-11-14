@@ -67,7 +67,7 @@ header {
 }
 
 header > h1 {
-    color: var(--cor7);
+    color: var(--cor12);
     background-color: var(--cor1);
     min-height: 120px;
     padding-top: 35px;
