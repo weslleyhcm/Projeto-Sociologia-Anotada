@@ -12,6 +12,7 @@
     --cor5: #FA5B00;
     --cor6: #FD9300;
     --cor7: #FCB501;
+    --cor8: #F4E5D0;
 
     --fonte-padrão: arial, verdana, helvetica, sans-serif;  
     --fonte-destaque: "Kaushan Script", cursive
@@ -58,10 +59,11 @@ div.video iframe {
 
 header {
     background-image: #350493;
+    background-color: var(--cor6);
 }
 
 header > h1 {
-    color: var(--cor4);
+    color: var(--cor5);
     background-color: var(--cor1);
     min-height: 120px;
     padding-top: 35px;
