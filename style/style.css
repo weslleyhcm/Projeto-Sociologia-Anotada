@@ -27,12 +27,6 @@
     padding: 0px;
 }
 
-.parallax {
-    height: 400px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-}
 
 body {
     font-family: var(--fonte-padrão);
