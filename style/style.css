@@ -186,6 +186,12 @@ section#img02 {
     background-position: right center;
 }
 
+@media screen and (max-width: 768px) {
+    section.imagem {
+        background-attachment: scroll !important; /* Desativa o parallax no cel e faz a imagem aparecer */
+        background-size: cover !important;        /* Cobre o espaço perfeitamente */
+    }
+
 footer {
     background-color: var(--cor1);
     color: white;
