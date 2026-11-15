@@ -157,13 +157,14 @@ section.imagem {
     background-color: var(--cor9);
     color: white;
     box-shadow: inset 6px 6px 13px rgba(0, 0, 0, 0.514);
-    background-size: 100% auto;
-    background-position: center center;
+    background-size: contain;                /* Garante que o texto da imagem nunca seja cortado */
+    background-position: center center;      /* Centraliza o texto da imagem */
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 32vw;
-    padding-top: 0;
-    padding-bottom: 0;
+    background-attachment: fixed;            /* Mantém o efeito parallax no PC */
+    
+    height: 220px;                           /* Altura bem mais compacta (era 400px) */
+    margin: 15px 0;                          /* Espaçamento menor para aproximar os textos */
+    padding: 0;
 }
 
 section.imagem > p {
@@ -171,6 +172,7 @@ section.imagem > p {
     padding: 5px;
     background-color: rgba(0, 0, 0, 0.514);
     text-shadow: 1px 1px 0px black;
+    
 }
 
 section#img01 {
