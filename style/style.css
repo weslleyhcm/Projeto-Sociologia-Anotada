@@ -133,11 +133,11 @@ nav > a:hover {
     margin-left: auto; /* Joga os ícones para o canto direito do menu */
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 
 .icone-rede {
-    height: 50px; /* Força a altura a ficar em 24 pixels */
+    height: 30px; /* Força a altura a ficar em 24 pixels */
     width: auto;  /* Mantém a proporção correta para não distorcer */
     display: block;
 }
