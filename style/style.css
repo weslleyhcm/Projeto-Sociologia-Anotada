@@ -62,10 +62,21 @@ div.video iframe {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-header {
-    background-image: #350493;
-    background-color: var(--cor9);
+
+
+   header {
+    background-color: var(--cor9); /* ou a cor #350493 que você queria */
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.logo {
+    height: 300px; /* Aqui você define a altura exata que quer (ex: 40px ou 50px) */
+    width: 1300px;  /* Mantém a proporção correta para não distorcer */
+}
+    
 
 header > h1 {
     color: var(--cor12);
@@ -176,14 +187,15 @@ section.imagem > p {
 }
 
 section#img01 {
-    background-image: url('../Imagens/sociologiaanotada.png');
-    background-position: center top;
+    background-image: url('../Imagens/Anotada\ Sociologia_\ Mira\ e\ Caneta.png');
+    background-position: center center;
+    
     
 }
 
 section#img02 {
-    background-image: url('../Imagens/sociologiaanotada2.jpeg');
-    background-position: right center;
+    background-image: url('../Imagens/Anotada\ Sociologiamira\ e\ Caneta2.png');
+    background-position: center center;
 }
 
 @media screen and (max-width: 768px) {
