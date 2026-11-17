@@ -104,6 +104,13 @@ nav {
     padding-bottom: 10px;
     padding-top: 10px;
     box-shadow: 0px 7px 7px black;
+    
+    /* Adicione estas linhas abaixo para organizar os itens em linha e alinhar no meio */
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Garante que se a tela for menor, os itens quebram linha direito */
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 nav > a {
@@ -119,6 +126,20 @@ nav > a {
 nav > a:hover {
     background-color: var(--cor2);
 
+}
+
+
+.redes-sociais {
+    margin-left: auto; /* Joga os ícones para o canto direito do menu */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icone-rede {
+    height: 50px; /* Força a altura a ficar em 24 pixels */
+    width: auto;  /* Mantém a proporção correta para não distorcer */
+    display: block;
 }
 main {
     background-color: white;
