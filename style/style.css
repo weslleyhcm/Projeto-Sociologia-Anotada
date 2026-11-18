@@ -307,6 +307,17 @@ footer {
         display: inline-block;
     }
 
+    .dropdown {
+        position: relative; /* Mantém o item base posicionado */
+    }
+
+    .dropdown-content {
+        top: 0 !important;        /* Alinha o topo da caixa com o topo do botão clicado */
+        left: 100% !important;    /* Joga a caixa inteira para a direita do botão */
+        margin-top: 0 !important;
+        margin-left: 8px;         /* Dá uma pequena distância lateral de respiro */
+    }
+
     /* Transforma as redes sociais em uma coluna vertical no canto direito */
     .redes-sociais {
         position: absolute;
