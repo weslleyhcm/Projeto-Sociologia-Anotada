@@ -105,7 +105,7 @@ header {
 
 /* Efeito hover no botão principal */
 .dropdown:hover .dropbtn {
-    background-color: var(--cor2);
+    background-color: var(--cor6);
 }
 
 /* Faz a setinha girar para cima quando o menu abre */
@@ -125,7 +125,8 @@ header {
     border-radius: 5px;
     top: 100%;
     left: 0;
-    margin-top: 5px;
+    margin-top: 0px;
+    padding-top: 10px;
 }
 
 /* Estilo dos links internos de cada dropdown */
@@ -142,7 +143,7 @@ header {
 
 /* Efeito ao passar o mouse nas opções internas */
 .dropdown-content a:hover {
-    background-color: var(--cor2);
+    background-color: var(--cor6);
     border-radius: 3px;
 }
 
@@ -150,6 +151,7 @@ header {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
 
 nav {
     background-color: var(--cor4);
@@ -173,7 +175,7 @@ nav > a {
 }
 
 nav > a:hover {
-    background-color: var(--cor2);
+    background-color: var(--cor6);
 }
 
 .redes-sociais {
@@ -316,6 +318,7 @@ footer {
         left: 100% !important;    /* Joga a caixa inteira para a direita do botão */
         margin-top: 0 !important;
         margin-left: 8px;         /* Dá uma pequena distância lateral de respiro */
+        padding-top: 0;
     }
 
     /* Transforma as redes sociais em uma coluna vertical no canto direito */
