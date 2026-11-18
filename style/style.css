@@ -275,7 +275,7 @@ footer {
 }
 
 /* =========================================================
-   RESPONSIVIDADE EXCLUSIVA PARA CELULARES (Até 768px)
+   RESPONSIVIDADE EXCLUSIVA PARA CELULARES (Compacto e Elegante)
    ========================================================= */
 @media screen and (max-width: 768px) {
     
@@ -288,37 +288,40 @@ footer {
         height: auto;      
     }
 
-    /* Transforma o menu em uma coluna limpa alinhada à esquerda */
+    /* Menu compacto alinhado à esquerda, sem ocupar a tela inteira */
     .menu {
         display: flex;
         flex-direction: column; 
         align-items: flex-start; 
         position: relative;
         padding-right: 60px; 
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 15px; /* Dá um leve recuo da borda esquerda */
     }
 
+    /* Tira a largura de 100% para os botões ficarem do tamanho do texto e mais próximos */
     .menu > a, 
     .dropdown {
-        font-size: 15px; 
-        width: 100%;     
-        margin: 4px 0;   
+        font-size: 14px; 
+        width: auto;     /* <--- MUDANÇA: Volta ao tamanho natural do texto */
+        margin: 2px 0;   /* <--- MUDANÇA: Reduz drasticamente o espaço vertical entre eles */
+        padding: 6px 8px; /* Reduz o padding interno do botão para ficar bem enxuto */
     }
 
-    /* Posiciona os ícones fixos no canto superior direito */
+    /* Mantém os ícones fixos no canto superior direito */
     .redes-sociais {
         position: absolute;
-        top: 15px;
-        right: 15px;
+        top: 12px;
+        right: 12px;
         margin: 0;
-        gap: 8px; 
+        gap: 6px; 
     }
 
-    /* Reduz o tamanho das imagens das redes sociais no celular */
+    /* Tamanho compacto dos ícones das redes sociais no celular */
     .redes-sociais img, 
     .icone-rede {
-        width: 26px !important; 
-        height: 26px !important;
+        width: 24px !important; 
+        height: 24px !important;
     }
 }
