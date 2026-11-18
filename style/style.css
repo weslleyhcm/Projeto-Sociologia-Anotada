@@ -28,7 +28,7 @@
 
 body {
     font-family: var(--fonte-padrão);
-    background-color: var(--cor9);
+    background-color: var(--cor2);
 }
 
 p {
@@ -193,11 +193,11 @@ nav > a:hover {
 }
 
 main {
-    background-color: white;
+    background-color: var(--cor0);
 }
 
 article > h1 {
-    background-color: white;
+    background-color: var(--cor0);
     padding-top: 10px;
     text-shadow: 1px 1px 0px #14082f;
     text-align: left;
@@ -205,16 +205,6 @@ article > h1 {
     margin: 15px 15px;
 }
 
-article > aside {
-    background-color: var(--cor4);
-    border-radius: 5px;
-    margin: 15px 15px;
-    text-align: justify;
-    font-size: 1em;
-    text-indent: 30px;
-    line-height: 2em;
-    padding: 0px 40px;
-}
 
 ul {
     text-align: left;
@@ -238,7 +228,7 @@ section.normal {
 }
 
 section.imagem {
-    background-color: var(--cor9);
+    background-color: var(--cor11);
     color: white;
     box-shadow: inset 6px 6px 13px rgba(0, 0, 0, 0.514);
     background-size: contain;                
@@ -246,7 +236,7 @@ section.imagem {
     background-repeat: no-repeat;
     background-attachment: fixed;            
     height: 220px;                         
-    margin: 15px 0;                          
+    margin: 0px 0;
     padding: 0;
 }
 
@@ -262,6 +252,7 @@ section#img01 {
     background-position: center center;
     background-size: contain;        /* Faz a imagem cobrir todo o espaço sem distorcer */
     background-repeat: no-repeat;  /* Evita que a imagem fique se repetindo */
+    background-color: var(--cor11);
     position: relative;
     width: 100%;                   /* Ocupa toda a largura disponível da caixa */
     height: 300px;                 
@@ -274,6 +265,8 @@ section#img02 {
     background-position: center center;
     background-size: contain;        /* Faz a imagem cobrir todo o espaço sem distorcer */
     background-repeat: no-repeat;  /* Evita que a imagem fique se repetindo */
+    background-color: var(--cor11);
+    position: relative;
     width: 100%;                   /* Ocupa toda a largura disponível da caixa */
     height: 300px;                 
     margin: 20px 0;
