@@ -272,11 +272,6 @@ section#img02 {
     margin: 20px 0;
 }
 
-.conteudo-principal {
-    max-width: 900px;  /* Limita o tamanho ideal para a leitura do texto */
-    width: 90%;        /* Deixa fluido e adaptável em telas menores */
-    margin: 40px auto; /* Centraliza a caixa inteira na tela */
-}
 footer {
     background-color: var(--cor1);
     color: white;
