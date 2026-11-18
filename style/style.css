@@ -200,13 +200,14 @@ nav > a:hover {
 
 .redes-sociais {
     margin-left: auto; /* Joga os ícones para o canto direito do menu */
+    margin-right: 65px;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 20px;
 }
 
 .icone-rede {
-    height: 30px; /* Força a altura a ficar em 24 pixels */
+    height: 45px; /* Força a altura a ficar em 24 pixels */
     width: auto;  /* Mantém a proporção correta para não distorcer */
     display: block;
 }
