@@ -274,9 +274,6 @@ footer {
     padding: 5px;
 }
 
-/* =========================================================
-   RESPONSIVIDADE EXCLUSIVA PARA CELULARES (Menu Central + Ícones na Vertical)
-   ========================================================= */
 @media screen and (max-width: 768px) {
     
     header {
@@ -288,25 +285,25 @@ footer {
         height: auto;      
     }
 
-    /* Container do menu em coluna, centralizado e com espaço à direita para os ícones */
-    .menu {
+    /* Puxa o menu para começar mais próximo do meio da tela, mantendo os textos alinhados */
+    nav, .menu {
         display: flex;
         flex-direction: column; 
-        align-items: flex-start; /* Alinha os textos à esquerda, mas ocupando o centro */
-        justify-content: center;
+        align-items: flex-start; 
         position: relative;
-        padding-right: 70px;     /* Espaço reservado na direita para os ícones */
         padding-top: 15px;
         padding-bottom: 15px;
-        padding-left: 20px;
+        padding-left: 28%;       /* <--- ISSO AQUI JOGA O BLOCO DO MENU PARA O CENTRO DA TELA */
+        padding-right: 60px;     /* Espaço livre para os ícones na direita */
     }
 
-    /* Cada link fica em sua linha, com o fundo ajustado só ao tamanho do texto (sem esticar) */
+    /* Cada link no seu tamanho natural, sem esticar */
+    nav > a,
     .menu > a, 
     .dropdown {
         font-size: 15px; 
-        width: auto;     /* O fundo roxo/hover acompanha apenas o texto */
-        margin: 6px 0;   /* Espaçamento elegante entre as linhas */
+        width: auto;     
+        margin: 4px 0;   
         display: inline-block;
     }
 
@@ -317,8 +314,8 @@ footer {
         right: 15px;
         margin: 0;
         display: flex;
-        flex-direction: column; /* <--- Joga o YouTube embaixo do Instagram */
-        gap: 10px;              /* Espaço vertical entre um ícone e outro */
+        flex-direction: column; 
+        gap: 10px;              
     }
 
     /* Tamanho compacto dos ícones no celular */
@@ -327,11 +324,12 @@ footer {
         width: 26px !important; 
         height: 26px !important;
     }
-    /* --- CORREÇÃO DAS IMAGENS DE FUNDO NO CELULAR --- */
+
+    /* Corrige o fundo para a imagem aparecer no celular */
     section.imagem {
-        background-attachment: scroll !important; /* Desativa o fixed que quebra no iOS/Android */
-        background-size: cover !important;        /* Garante que a imagem preencha o espaço */
+        background-attachment: scroll !important; 
+        background-size: cover !important;        
         background-position: center center !important;
-        height: 200px;                            /* Altura ideal para aparecer no celular */
+        height: 200px;                            
     }
 }
