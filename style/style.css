@@ -28,7 +28,7 @@
 
 body {
     font-family: var(--fonte-padrão);
-    background-color: var(--cor2);
+    background-color: var(--cor9);
 }
 
 p {
@@ -245,7 +245,7 @@ section.imagem {
     background-position: center center;      
     background-repeat: no-repeat;
     background-attachment: fixed;            
-    height: 220px;                           
+    height: 220px;                         
     margin: 15px 0;                          
     padding: 0;
 }
@@ -260,13 +260,30 @@ section.imagem > p {
 section#img01 {
     background-image: url('../Imagens/Anotada\ Sociologia_\ Mira\ e\ Caneta.png');
     background-position: center center;
+    background-size: contain;        /* Faz a imagem cobrir todo o espaço sem distorcer */
+    background-repeat: no-repeat;  /* Evita que a imagem fique se repetindo */
+    position: relative;
+    width: 100%;                   /* Ocupa toda a largura disponível da caixa */
+    height: 300px;                 
+    margin: 20px 0;
+    
 }
 
 section#img02 {
     background-image: url('../Imagens/Anotada\ Sociologiamira\ e\ Caneta2.png');
     background-position: center center;
+    background-size: contain;        /* Faz a imagem cobrir todo o espaço sem distorcer */
+    background-repeat: no-repeat;  /* Evita que a imagem fique se repetindo */
+    width: 100%;                   /* Ocupa toda a largura disponível da caixa */
+    height: 300px;                 
+    margin: 20px 0;
 }
 
+.conteudo-principal {
+    max-width: 900px;  /* Limita o tamanho ideal para a leitura do texto */
+    width: 90%;        /* Deixa fluido e adaptável em telas menores */
+    margin: 40px auto; /* Centraliza a caixa inteira na tela */
+}
 footer {
     background-color: var(--cor1);
     color: white;
