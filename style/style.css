@@ -79,16 +79,6 @@ div.video iframe {
     height: auto;    /* Mantém a proporção automaticamente */
 }
 
-@media screen and (max-width: 768px) {
-    header {
-        padding: 5px 10px; /* Reduz o espaçamento no celular se precisar */
-    }
-
-    .logo {
-        width: 100%;       /* Ocupa a largura disponível com folga */
-        height: auto;      /* Redimensiona a altura proporcionalmente para não distorcer */
-    }
-}
 
 .dropdown {
     position: relative;
@@ -289,11 +279,52 @@ section#img02 {
     background-position: center center;
 }
 
+/* --- RESPONSIVIDADE COMPLETA PARA CELULARES (Logo + Menu + Redes Sociais) --- */
 @media screen and (max-width: 768px) {
-    section.imagem {
-        background-attachment: scroll !important; /* Desativa o parallax no cel e faz a imagem aparecer */
-        background-size: cover !important;        /* Cobre o espaço perfeitamente */
+    
+    /* 1. Ajustes do Cabeçalho e da Logo */
+    header {
+        padding: 5px 10px;
     }
+
+    .logo {
+        width: 100%;       
+        height: auto;      
+    }
+
+    /* 2. Transforma a barra do menu em um container flexível inteligente */
+    .menu {
+        display: flex;
+        flex-wrap: wrap; 
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        padding-right: 60px; /* Cria um espaço reservado no canto direito para os ícones */
+    }
+
+    /* Ajusta os botões do menu para ficarem melhores no celular */
+    .menu > a, 
+    .dropdown {
+        font-size: 14px; 
+        margin: 4px 6px;  
+    }
+
+    /* 3. Deixa os ícones das redes sociais menores e fixos no canto superior direito */
+    .redes-sociais {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        margin: 0;
+        gap: 6px; 
+    }
+
+    /* Reduz o tamanho das imagens/ícones das redes sociais no celular */
+    .redes-sociais img, 
+    .redes-sociais i {
+        width: 24px  !important; 
+        height: 24px !important;
+    }
+}
 
 footer {
     background-color: var(--cor1);
