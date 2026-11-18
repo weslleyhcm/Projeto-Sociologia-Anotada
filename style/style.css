@@ -332,8 +332,8 @@ footer {
     /* Tamanho compacto dos ícones no celular */
     .redes-sociais img, 
     .icone-rede {
-        width: 36px !important; 
-        height: 36px !important;
+        width: 50px !important; 
+        height: 50px !important;
     }
 
     /* Corrige o fundo para a imagem aparecer no celular */
