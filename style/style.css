@@ -293,8 +293,8 @@ footer {
         position: relative;
         padding-top: 15px;
         padding-bottom: 15px;
-        padding-left: 28%;       /* <--- ISSO AQUI JOGA O BLOCO DO MENU PARA O CENTRO DA TELA */
-        padding-right: 60px;     /* Espaço livre para os ícones na direita */
+        padding-left: 15px;      /* <--- Volta para a esquerda com um pequeno respiro */
+        padding-right: 65px; /* Espaço reservado para os ícones maiores na direita */
     }
 
     /* Cada link no seu tamanho natural, sem esticar */
@@ -332,8 +332,8 @@ footer {
     /* Tamanho compacto dos ícones no celular */
     .redes-sociais img, 
     .icone-rede {
-        width: 26px !important; 
-        height: 26px !important;
+        width: 36px !important; 
+        height: 36px !important;
     }
 
     /* Corrige o fundo para a imagem aparecer no celular */
