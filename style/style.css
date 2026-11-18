@@ -95,7 +95,7 @@ div.video iframe {
     display: inline-block;
 }
 
-/* O botão principal do dropdown (herda o estilo dos seus links normais) */
+/* O botão principal do dropdown com a setinha moderna integrada */
 .dropdown .dropbtn {
     color: black;
     padding: 10px;
@@ -106,21 +106,41 @@ div.video iframe {
     transition-duration: 0.5s;
 }
 
-/* Efeito hover no botão principal igual ao seu nav > a:hover */
+/* Desenha a setinha moderna */
+.dropdown .dropbtn::after {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-right: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
+    transform: rotate(45deg);
+    margin-left: 7px;
+    margin-bottom: 3px;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito hover no botão principal */
 .dropdown:hover .dropbtn {
     background-color: var(--cor2);
+}
+
+/* Faz a setinha girar para cima quando o menu abre */
+.dropdown:hover .dropbtn::after {
+    transform: rotate(-135deg);
+    margin-bottom: 0px;
 }
 
 /* A caixinha que fica escondida até passarem o mouse */
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: var(--cor4); /* Usa o amarelo claro do seu tema */
+    background-color: var(--cor4);
     min-width: 200px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 10;
     border-radius: 5px;
-    top: 100%; /* Posiciona logo abaixo do menu principal */
+    top: 100%;
     left: 0;
     margin-top: 5px;
 }
@@ -133,17 +153,17 @@ div.video iframe {
     display: block;
     text-align: left;
     font-weight: normal;
-    white-space: nowrap; /* Evita que o texto quebre linha */
+    white-space: nowrap;
     transition-duration: 0.3s;
 }
 
 /* Efeito ao passar o mouse nas 4 opções internas */
 .dropdown-content a:hover {
-    background-color: var(--cor2); /* Usa a cor de destaque do seu tema */
+    background-color: var(--cor2);
     border-radius: 3px;
 }
 
-/* Comando mágico: Mostra o conteúdo quando o mouse passa por cima do dropdown */
+/* Mostra o conteúdo quando o mouse passa por cima do dropdown */
 .dropdown:hover .dropdown-content {
     display: block;
 }
