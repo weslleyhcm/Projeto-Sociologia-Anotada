@@ -14,10 +14,10 @@
     --cor8: #F4E5D0;
     --cor9: #350493;
     --cor10: #52029E;
-    --cor11: #5500AA; 
+    --cor11: #5500AA;
     --cor12: #FFFF55;
 
-    --fonte-padrão: arial, verdana, helvetica, sans-serif;  
+    --fonte-padrão: arial, verdana, helvetica, sans-serif;
     --fonte-destaque: "Kaushan Script", cursive;
 }
 
@@ -28,7 +28,7 @@
 
 body {
     font-family: var(--fonte-padrão);
-    background-color: var(--cor2);
+    background-color: var(--cor9);
 }
 
 p {
@@ -42,8 +42,8 @@ p {
 
 div.video {
     background-color: var(--cor1);
-    margin: 20px 20px; 
-    padding: 20px;       
+    margin: 20px 20px;
+    padding: 20px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -55,7 +55,7 @@ div.video iframe {
     aspect-ratio: 16 / 9;
     height: auto;
     display: block;
-    border-radius: 8px; 
+    border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -68,101 +68,18 @@ header {
 }
 
 .logo {
-    width: 1100px;  
-    max-width: 100%; 
-    height: auto;    
+    width: 1100px;
+    max-width: 100%;
+    height: auto;
 }
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-/* O botão principal do dropdown com a setinha moderna integrada */
-.dropdown .dropbtn {
-    color: black;
-    padding: 10px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    display: block;
-    transition-duration: 0.5s;
-}
-
-/* Desenha a setinha moderna */
-.dropdown .dropbtn::after {
-    content: "";
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    border-right: 1.5px solid currentColor;
-    border-bottom: 1.5px solid currentColor;
-    transform: rotate(45deg);
-    margin-left: 7px;
-    margin-bottom: 3px;
-    transition: transform 0.3s ease;
-}
-
-/* Efeito hover no botão principal */
-.dropdown:hover .dropbtn {
-    background-color: var(--cor6);
-}
-
-/* Faz a setinha girar para cima quando o menu abre */
-.dropdown:hover .dropbtn::after {
-    transform: rotate(-135deg);
-    margin-bottom: 0px;
-}
-
-/* A caixinha que fica escondida até passarem o mouse */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: var(--cor4);
-    min-width: 200px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 10;
-    border-radius: 5px;
-    top: 100%;
-    left: 0;
-    margin-top: 0px;
-    padding-top: 10px;
-}
-
-/* Estilo dos links internos de cada dropdown */
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    font-weight: normal;
-    white-space: nowrap;
-    transition-duration: 0.3s;
-}
-
-/* Efeito ao passar o mouse nas opções internas */
-.dropdown-content a:hover {
-    background-color: var(--cor6);
-    border-radius: 3px;
-}
-
-/* Mostra o conteúdo quando o mouse passa por cima do dropdown */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
 
 nav {
     background-color: var(--cor4);
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding: 10px 20px;
     box-shadow: 0px 7px 7px black;
     display: flex;
     align-items: center;
-    flex-wrap: wrap; 
-    padding-left: 20px;
-    padding-right: 20px;
+    flex-wrap: wrap;
 }
 
 nav > a {
@@ -178,8 +95,78 @@ nav > a:hover {
     background-color: var(--cor6);
 }
 
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown .dropbtn {
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    transition-duration: 0.5s;
+}
+
+.dropdown .dropbtn::after {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-right: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
+    transform: rotate(45deg);
+    margin-left: 7px;
+    margin-bottom: 3px;
+    transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: var(--cor6);
+}
+
+.dropdown:hover .dropbtn::after {
+    transform: rotate(-135deg);
+    margin-bottom: 0px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--cor4);
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    border-radius: 5px;
+    top: 100%;
+    left: 0;
+    padding-top: 10px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-weight: normal;
+    white-space: nowrap;
+    transition-duration: 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--cor6);
+    border-radius: 3px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 .redes-sociais {
-    margin-left: auto; 
+    margin-left: auto;
     margin-right: 65px;
     display: flex;
     align-items: center;
@@ -187,8 +174,8 @@ nav > a:hover {
 }
 
 .icone-rede {
-    height: 45px; 
-    width: auto;  
+    height: 45px;
+    width: auto;
     display: block;
 }
 
@@ -197,79 +184,49 @@ main {
 }
 
 article > h1 {
-    background-color: var(--cor0);
+    color: black;
     padding-top: 10px;
     text-shadow: 1px 1px 0px #14082f;
     text-align: left;
     text-indent: 8px;
-    margin: 15px 15px;
+    margin: 0px 15px 15px 15px;
 }
 
-
-ul {
-    text-align: left;
-}
-
-section {
-    padding-top: 10vh;
-    padding-bottom: 10vh;
+section.texto {
+    padding: 6vh 30px;
     line-height: 2em;
-    padding-left: 30px;
-    font-size: 2vw;
-}
-
-section > p {
-    padding-bottom: 2em;
-}
-
-section.normal {
-    background-color: white;
+    font-size: 1.1em;
+    background-color: var(--cor0);
     color: black;
+}
+
+section.texto > article > p {
+    padding-bottom: 1em;
+    color: black;
+    text-shadow: none;
 }
 
 section.imagem {
     background-color: var(--cor11);
     color: white;
     box-shadow: inset 6px 6px 13px rgba(0, 0, 0, 0.514);
-    background-size: contain;                
-    background-position: center center;      
+    background-size: contain;
+    background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed;            
-    height: 220px;                         
-    margin: 0px 0;
+    background-attachment: fixed;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin: 20px 0;
     padding: 0;
-}
-
-section.imagem > p {
-    display: inline-block;
-    padding: 5px;
-    background-color: rgba(0, 0, 0, 0.514);
-    text-shadow: 1px 1px 0px black;
 }
 
 section#img01 {
     background-image: url('../Imagens/Anotada\ Sociologia_\ Mira\ e\ Caneta.png');
-    background-position: center center;
-    background-size: contain;        /* Faz a imagem cobrir todo o espaço sem distorcer */
-    background-repeat: no-repeat;  /* Evita que a imagem fique se repetindo */
-    background-color: var(--cor11);
-    position: relative;
-    width: 100%;                   /* Ocupa toda a largura disponível da caixa */
-    height: 300px;                 
-    margin: 20px 0;
-    
 }
 
 section#img02 {
     background-image: url('../Imagens/Anotada\ Sociologiamira\ e\ Caneta2.png');
-    background-position: center center;
-    background-size: contain;        /* Faz a imagem cobrir todo o espaço sem distorcer */
-    background-repeat: no-repeat;  /* Evita que a imagem fique se repetindo */
-    background-color: var(--cor11);
-    position: relative;
-    width: 100%;                   /* Ocupa toda a largura disponível da caixa */
-    height: 300px;                 
-    margin: 20px 0;
 }
 
 footer {
@@ -282,73 +239,64 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    
     header {
         padding: 5px 10px;
     }
 
     .logo {
-        width: 100%;       
-        height: auto;      
+        width: 100%;
+        height: auto;
     }
 
-    /* Puxa o menu para começar mais próximo do meio da tela, mantendo os textos alinhados */
     nav, .menu {
         display: flex;
-        flex-direction: column; 
-        align-items: flex-start; 
+        flex-direction: column;
+        align-items: flex-start;
         position: relative;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        padding-left: 15px;      /* <--- Volta para a esquerda com um pequeno respiro */
-        padding-right: 65px; /* Espaço reservado para os ícones maiores na direita */
+        padding: 15px 65px 15px 15px;
     }
 
-    /* Cada link no seu tamanho natural, sem esticar */
     nav > a,
-    .menu > a, 
+    .menu > a,
     .dropdown {
-        font-size: 15px; 
-        width: auto;     
-        margin: 4px 0;   
+        font-size: 15px;
+        width: auto;
+        margin: 4px 0;
         display: inline-block;
     }
 
     .dropdown {
-        position: relative; /* Mantém o item base posicionado */
+        position: relative;
     }
 
     .dropdown-content {
-        top: 0 !important;        /* Alinha o topo da caixa com o topo do botão clicado */
-        left: 100% !important;    /* Joga a caixa inteira para a direita do botão */
+        top: 0 !important;
+        left: 100% !important;
         margin-top: 0 !important;
-        margin-left: 8px;         /* Dá uma pequena distância lateral de respiro */
+        margin-left: 8px;
         padding-top: 0;
     }
 
-    /* Transforma as redes sociais em uma coluna vertical no canto direito */
     .redes-sociais {
         position: absolute;
         top: 15px;
         right: 15px;
         margin: 0;
         display: flex;
-        flex-direction: column; 
-        gap: 10px;              
+        flex-direction: column;
+        gap: 10px;
     }
 
-    /* Tamanho compacto dos ícones no celular */
-    .redes-sociais img, 
+    .redes-sociais img,
     .icone-rede {
-        width: 50px !important; 
+        width: 50px !important;
         height: 50px !important;
     }
 
-    /* Corrige o fundo para a imagem aparecer no celular */
     section.imagem {
-        background-attachment: scroll !important; 
-        background-size: cover !important;        
+        background-attachment: scroll !important;
+        background-size: cover !important;
         background-position: center center !important;
-        height: 200px;                            
+        height: 200px;
     }
 }
