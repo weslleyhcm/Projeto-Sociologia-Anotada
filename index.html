@@ -12,37 +12,39 @@
         <img src="Imagens/logótipo3d-sociologiaanotada1.png" alt="Logo da Sociologia Anotada" class="logo">
     </header>
 
+    <!-- Botão dos três tracinhos (aparece no mobile via CSS e é controlado pelo JS) -->
+    <button type="button" class="btn-hamburguer" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
     <nav class="menu">
         <a href="https://sociologiaanotada.com.br/">Início</a>
 
         <div class="dropdown">
             <a href="#" class="dropbtn">ENEM</a>
             <div class="dropdown-content">
-                <a href="enexame.html" target="_blank" rel="noopener noreferrer">O exame</a>
-                <a href="enincidencia.html" target="_blank" rel="noopener noreferrer">A incidência</a>
-                
+                <a href="enexame.html" target="_blank" rel="noopener noreferrer">Exame</a>
+                <a href="enincidencia.html" target="_blank" rel="noopener noreferrer">Incidência</a>
             </div>
         </div>
 
         <div class="dropdown">
-            <a href="#" class="dropbtn">Estudar agora</a>
+            <a href="#" class="dropbtn">Aulas</a>
             <div class="dropdown-content">
-                <a href="eautores.html" target="_blank" rel="noopener noreferrer">Autores</a>
-                <a href="ecultura.html" target="_blank" rel="noopener noreferrer">Cultura</a>
-                <a href="epolitica.html" target="_blank" rel="noopener noreferrer">Política</a>
-                <a href="eetnico-raciais.html" target="_blank" rel="noopener noreferrer">Relações Étnico-raciais</a>
-                <a href="egenero.html" target="_blank" rel="noopener noreferrer">Relações de gênero</a>
+                <a href="aautores.html" target="_blank" rel="noopener noreferrer">Autores</a>
+                <a href="aeixos.html" target="_blank" rel="noopener noreferrer">Eixos</a>
+                <a href="aroteiro.html" target="_blank" rel="noopener noreferrer">Roteiro</a>
             </div>
         </div>
 
         <div class="dropdown">
-            <a href="#" class="dropbtn">Fazer questão</a>
+            <a href="#" class="dropbtn">Questões</a>
             <div class="dropdown-content">
                 <a href="qautores.html" target="_blank" rel="noopener noreferrer">Autores</a>
-                <a href="qcultura.html" target="_blank" rel="noopener noreferrer">Cultura</a>
-                <a href="qpolitica.html" target="_blank" rel="noopener noreferrer">Política</a>
-                <a href="qetnico-raciais.html" target="_blank" rel="noopener noreferrer">Relações Étnico-raciais</a>
-                <a href="qgenero.html" target="_blank" rel="noopener noreferrer">Relações de gênero</a>
+                <a href="qeixos.html" target="_blank" rel="noopener noreferrer">Eixos</a>
+                <a href="qedicao.html" target="_blank" rel="noopener noreferrer">Edição</a>
             </div>
         </div>
 
@@ -76,5 +78,26 @@
     <footer>
         <p>Site criado para a Sociologia Anotada</p>
     </footer>
+
+    <script>
+        const btn = document.querySelector('.btn-hamburguer');
+        const menu = document.querySelector('nav.menu');
+
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('ativo');
+                btn.classList.toggle('ativo');
+            });
+        }
+
+        document.querySelectorAll('.dropdown .dropbtn').forEach((dropbtn) => {
+            dropbtn.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    dropbtn.parentElement.classList.toggle('ativo');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

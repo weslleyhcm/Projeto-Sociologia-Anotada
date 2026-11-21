@@ -73,6 +73,11 @@ header {
     height: auto;
 }
 
+/* Esconde o botão hambúrguer no desktop */
+.btn-hamburguer {
+    display: none;
+}
+
 nav {
     background-color: var(--cor4);
     padding: 10px 20px;
@@ -248,12 +253,55 @@ footer {
         height: auto;
     }
 
-    nav, .menu {
+    /* Botão dos três tracinhos no mobile */
+    .btn-hamburguer {
         display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        width: 42px;
+        height: 42px;
+        padding: 8px;
+        margin: 8px 15px 8px auto;
+        background-color: var(--cor4);
+        color: black;
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    .btn-hamburguer span {
+        display: block;
+        width: 100%;
+        height: 2.5px;
+        background-color: currentColor;
+        border-radius: 2px;
+        transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+
+    .btn-hamburguer.ativo span:nth-child(1) {
+        transform: translateY(7.5px) rotate(45deg);
+    }
+
+    .btn-hamburguer.ativo span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .btn-hamburguer.ativo span:nth-child(3) {
+        transform: translateY(-7.5px) rotate(-45deg);
+    }
+
+    /* Menu fechado por padrão e aberto ao adicionar .ativo via JS */
+    nav, .menu {
+        display: none;
         flex-direction: column;
         align-items: flex-start;
         position: relative;
         padding: 15px 65px 15px 15px;
+    }
+
+    nav.ativo, .menu.ativo {
+        display: flex;
     }
 
     nav > a,
@@ -269,12 +317,23 @@ footer {
         position: relative;
     }
 
+    /* Submenu fechado por padrão e aberto embaixo ao adicionar .ativo no .dropdown */
     .dropdown-content {
-        top: 0 !important;
-        left: 100% !important;
-        margin-top: 0 !important;
-        margin-left: 8px;
-        padding-top: 0;
+        display: none;
+        position: static !important;
+        top: auto !important;
+        left: auto !important;
+        margin-top: 4px !important;
+        margin-left: 12px;
+        padding-top: 4px;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .dropdown.ativo .dropdown-content {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
     }
 
     .redes-sociais {
