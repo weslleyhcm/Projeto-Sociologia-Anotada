@@ -345,30 +345,30 @@ footer {
         display: block;
     }
 
-    /* Caixa do menu abre LOGO ABAIXO da barra do hambúrguer/X e termina após "Questões" */
+    /* Caixa do menu SEMPRE logo abaixo da barra do hambúrguer/X e terminando após "Questões" */
     .links-menu {
-        display: flex;
+        display: none;
         flex-direction: column;
         align-items: flex-start;
         flex-wrap: nowrap;
-        position: fixed;
-        top: 58px;
-        left: -260px;
+        position: absolute;
+        top: 100%;
+        left: 15px;
         width: 240px;
         height: auto;
-        max-height: calc(100vh - 70px);
+        max-height: calc(100vh - 75px);
         padding: 10px 14px 12px 14px;
         background-color: var(--cor4);
         border: 1px solid rgba(0, 0, 0, 0.15);
+        border-top: none;
         border-radius: 0 0 8px 8px;
         box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-        transition: left 0.28s ease;
-        z-index: 1001;
+        z-index: 1003;
         overflow-y: auto;
     }
 
     .links-menu.ativo {
-        left: 15px; /* Alinhada à esquerda, logo abaixo do botão hambúrguer / X */
+        display: flex;
     }
 
     .links-menu > a,
