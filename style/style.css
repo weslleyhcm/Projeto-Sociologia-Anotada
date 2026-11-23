@@ -259,7 +259,7 @@ footer {
 }
 
 /* =========================================
-   MOBILE (até 768px)
+   MOBILE (até 768px) — CAIXA AO LADO DO BOTÃO
    ========================================= */
 @media screen and (max-width: 768px) {
     header {
@@ -278,7 +278,7 @@ footer {
         left: 0;
         width: 100%;
         min-height: 58px;
-        z-index: 1002; /* Fica acima da caixa .links-menu para o botão nunca ficar coberto */
+        z-index: 1002;
         background-color: var(--cor4);
         padding: 8px 15px;
         display: flex;
@@ -288,10 +288,11 @@ footer {
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
     }
 
-    /* Botão hambúrguer à esquerda dentro da barra amarela */
+    /* Botão hambúrguer / X à esquerda, sempre visível e fácil de clicar */
     .btn-hamburguer {
         position: relative;
-        z-index: 1003; /* Garante prioridade de clique para fechar o menu */
+        z-index: 1004;
+        flex-shrink: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -344,39 +345,45 @@ footer {
         display: block;
     }
 
-    /* Aba lateral compacta: começa logo abaixo da barra (58px) e termina após "Questões" */
+    /* Caixa do menu abre AO LADO do botão (left: 65px) e termina logo após "Questões" */
     .links-menu {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         flex-wrap: nowrap;
         position: fixed;
-        top: 58px;
-        left: -280px;
-        width: 260px;
+        top: 8px;
+        left: -260px;
+        width: 215px;
         height: auto;
-        max-height: calc(100vh - 70px);
-        padding: 12px 15px 14px 15px;
+        max-height: calc(100vh - 20px);
+        padding: 10px 14px 12px 14px;
         background-color: var(--cor4);
-        border-radius: 0 0 8px 0;
-        box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.25);
-        transition: left 0.3s ease;
-        z-index: 1001; /* Abaixo da barra e do botão, evitando sobreposição */
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 8px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+        transition: left 0.28s ease;
+        z-index: 1003;
         overflow-y: auto;
     }
 
     .links-menu.ativo {
-        left: 0;
+        left: 65px; /* Fica ao lado do botão de 42px (15px + 42px + 8px de respiro) */
     }
 
     .links-menu > a,
     .dropdown {
-        font-size: 16px;
+        font-size: 15px;
         width: 100%;
-        padding: 10px 5px;
-        margin: 2px 0;
+        padding: 9px 6px;
+        margin: 1px 0;
         border-bottom: 1px solid rgba(0, 0, 0, 0.08);
         display: block;
+    }
+
+    .links-menu > a:last-child,
+    .dropdown:last-child {
+        border-bottom: none;
     }
 
     .dropdown {
@@ -392,8 +399,8 @@ footer {
     .dropdown-content {
         display: none;
         position: static !important;
-        margin-top: 8px !important;
-        margin-left: 12px;
+        margin-top: 6px !important;
+        margin-left: 10px;
         padding-left: 10px;
         border-left: 2px solid rgba(0, 0, 0, 0.2);
         background-color: transparent;
@@ -403,7 +410,7 @@ footer {
     .dropdown.ativo .dropdown-content {
         display: flex !important;
         flex-direction: column;
-        gap: 8px;
+        gap: 6px;
     }
 
     section.imagem {
