@@ -243,6 +243,7 @@ section.imagem {
 
 section#img01 {
     background-image: url('../Imagens/Anotada\ Sociologia_\ Mira\ e\ Caneta.png');
+    background-position: center 75px;
 }
 
 section#img02 {
