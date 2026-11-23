@@ -250,7 +250,7 @@ footer {
 }
 
 /* =========================================
-   MOBILE (até 768px)
+   MOBILE (até 768px) — VERSÃO INTEGRADA
    ========================================= */
 @media screen and (max-width: 768px) {
     header {
@@ -262,41 +262,37 @@ footer {
         height: auto;
     }
 
-    /* Faixa superior fixa que acompanha a rolagem */
-    nav.menu::before {
-        content: "";
-        position: fixed;
+    /* 1. Barra amarela de ponta a ponta, logo abaixo da logo e acompanhando a rolagem */
+    nav.menu {
+        position: sticky;
         top: 0;
         left: 0;
         width: 100%;
-        height: 58px;
-        background-color: var(--cor4);
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         z-index: 1000;
-        pointer-events: none;
+        background-color: var(--cor4);
+        padding: 8px 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
     }
 
-    /* 1. Botão hambúrguer / X à ESQUERDA e acompanhando a rolagem */
-    .btn-hamburguer,
-    button.btn-hamburguer {
-        display: flex !important;
+    /* Botão hambúrguer à esquerda, dentro da barra amarela */
+    .btn-hamburguer {
+        display: flex;
         flex-direction: column;
         justify-content: center;
         gap: 5px;
         width: 42px;
         height: 42px;
         padding: 8px;
-        position: fixed !important;
-        top: 8px !important;
-        left: 15px !important;
-        right: auto !important;
-        margin: 0 !important;
-        background-color: var(--cor4);
+        margin: 0;
+        background-color: transparent;
         color: black;
         border: 1px solid rgba(0, 0, 0, 0.25);
         border-radius: 6px;
         cursor: pointer;
-        z-index: 1002 !important;
     }
 
     .btn-hamburguer span {
@@ -320,67 +316,49 @@ footer {
         transform: translateY(-7.5px) rotate(-45deg);
     }
 
-    /* 2. Ícones sociais à DIREITA, na HORIZONTAL e na MESMA LINHA */
-    .redes-sociais,
-    nav.menu .redes-sociais {
-        position: fixed !important;
-        top: 13px !important;
-        right: 15px !important;
-        left: auto !important;
-        bottom: auto !important;
-        margin: 0 !important;
-        display: flex !important;
-        flex-direction: row !important;
-        align-items: center !important;
-        gap: 12px !important;
-        z-index: 1002 !important;
-    }
-
-    .redes-sociais a {
-        display: inline-flex;
+    /* 2. Ícones de Instagram e YouTube na horizontal, na mesma linha e barra amarela */
+    .redes-sociais {
+        margin: 0;
+        display: flex;
+        flex-direction: row;
         align-items: center;
+        gap: 12px;
     }
 
     .redes-sociais img,
     .icone-rede {
-        width: 32px !important;
-        height: 32px !important;
+        width: 34px !important;
+        height: 34px !important;
         display: block;
     }
 
-    /* 3. Menu abrindo como ABA LATERAL à esquerda */
-    nav,
-    nav.menu,
-    .menu {
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: flex-start !important;
-        align-items: flex-start !important;
-        flex-wrap: nowrap !important;
-        position: fixed !important;
-        top: 58px !important;
-        left: -280px !important;
-        right: auto !important;
-        width: 260px !important;
-        height: calc(100vh - 58px) !important;
-        padding: 20px 15px !important;
-        margin: 0 !important;
-        background-color: var(--cor4) !important;
-        box-shadow: 3px 0 10px rgba(0, 0, 0, 0.25) !important;
-        transition: left 0.3s ease !important;
-        z-index: 1001 !important;
-        overflow-y: auto !important;
+    /* 3. Aba lateral que abre à esquerda e termina logo após "Questões" */
+    .links-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        position: fixed;
+        top: 58px;
+        left: -280px;
+        width: 260px;
+        height: auto;
+        max-height: calc(100vh - 70px);
+        padding: 12px 15px 14px 15px;
+        background-color: var(--cor4);
+        border-radius: 0 0 8px 0;
+        box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.25);
+        transition: left 0.3s ease;
+        z-index: 999;
+        overflow-y: auto;
     }
 
-    nav.ativo,
-    nav.menu.ativo,
-    .menu.ativo {
-        left: 0 !important;
+    .links-menu.ativo {
+        left: 0;
     }
 
-    /* 4. Abas principais (Início, ENEM, Aulas, Questões) */
-    nav > a,
-    .menu > a,
+    /* Abas principais (Início, ENEM, Aulas, Questões) */
+    .links-menu > a,
     .dropdown {
         font-size: 16px;
         width: 100%;
@@ -395,22 +373,26 @@ footer {
         cursor: pointer;
     }
 
-    /* Subabas fechadas por padrão e abrindo PARA BAIXO ao clicar */
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    /* Subabas fechadas por padrão e abrindo para baixo ao clicar */
     .dropdown-content {
-        display: none !important;
+        display: none;
         position: static !important;
         margin-top: 8px !important;
-        margin-left: 12px !important;
-        padding-left: 10px !important;
+        margin-left: 12px;
+        padding-left: 10px;
         border-left: 2px solid rgba(0, 0, 0, 0.2);
-        background-color: transparent !important;
-        box-shadow: none !important;
+        background-color: transparent;
+        box-shadow: none;
     }
 
     .dropdown.ativo .dropdown-content {
         display: flex !important;
-        flex-direction: column !important;
-        gap: 8px !important;
+        flex-direction: column;
+        gap: 8px;
     }
 
     section.imagem {
