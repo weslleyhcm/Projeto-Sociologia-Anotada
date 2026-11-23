@@ -262,7 +262,7 @@ footer {
         height: auto;
     }
 
-    /* Barra superior fixa no mobile que acompanha a rolagem */
+    /* Faixa superior fixa que acompanha a rolagem */
     nav.menu::before {
         content: "";
         position: fixed;
@@ -271,30 +271,32 @@ footer {
         width: 100%;
         height: 58px;
         background-color: var(--cor4);
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         z-index: 1000;
         pointer-events: none;
     }
 
-    /* Botão hambúrguer na esquerda, no topo */
-    .btn-hamburguer {
-        display: flex;
+    /* 1. Botão hambúrguer / X à ESQUERDA e acompanhando a rolagem */
+    .btn-hamburguer,
+    button.btn-hamburguer {
+        display: flex !important;
         flex-direction: column;
         justify-content: center;
         gap: 5px;
         width: 42px;
         height: 42px;
         padding: 8px;
-        position: fixed;
-        top: 8px;
-        left: 15px;
-        margin: 0;
-        background-color: transparent;
+        position: fixed !important;
+        top: 8px !important;
+        left: 15px !important;
+        right: auto !important;
+        margin: 0 !important;
+        background-color: var(--cor4);
         color: black;
         border: 1px solid rgba(0, 0, 0, 0.25);
         border-radius: 6px;
         cursor: pointer;
-        z-index: 1002;
+        z-index: 1002 !important;
     }
 
     .btn-hamburguer span {
@@ -318,17 +320,25 @@ footer {
         transform: translateY(-7.5px) rotate(-45deg);
     }
 
-    /* Ícones sociais à direita na horizontal, na mesma linha do hambúrguer */
-    .redes-sociais {
-        position: fixed;
-        top: 13px;
-        right: 15px;
-        margin: 0;
-        display: flex;
-        flex-direction: row;
+    /* 2. Ícones sociais à DIREITA, na HORIZONTAL e na MESMA LINHA */
+    .redes-sociais,
+    nav.menu .redes-sociais {
+        position: fixed !important;
+        top: 13px !important;
+        right: 15px !important;
+        left: auto !important;
+        bottom: auto !important;
+        margin: 0 !important;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 12px !important;
+        z-index: 1002 !important;
+    }
+
+    .redes-sociais a {
+        display: inline-flex;
         align-items: center;
-        gap: 12px;
-        z-index: 1002;
     }
 
     .redes-sociais img,
@@ -338,31 +348,37 @@ footer {
         display: block;
     }
 
-    /* Menu abrindo como aba lateral à esquerda */
-    nav, .menu {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        flex-wrap: nowrap;
-        position: fixed;
-        top: 58px;
-        left: -280px;
-        width: 260px;
-        height: calc(100vh - 58px);
-        padding: 20px 15px;
-        background-color: var(--cor4);
-        box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
-        transition: left 0.3s ease;
-        z-index: 1001;
-        overflow-y: auto;
+    /* 3. Menu abrindo como ABA LATERAL à esquerda */
+    nav,
+    nav.menu,
+    .menu {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+        flex-wrap: nowrap !important;
+        position: fixed !important;
+        top: 58px !important;
+        left: -280px !important;
+        right: auto !important;
+        width: 260px !important;
+        height: calc(100vh - 58px) !important;
+        padding: 20px 15px !important;
+        margin: 0 !important;
+        background-color: var(--cor4) !important;
+        box-shadow: 3px 0 10px rgba(0, 0, 0, 0.25) !important;
+        transition: left 0.3s ease !important;
+        z-index: 1001 !important;
+        overflow-y: auto !important;
     }
 
-    nav.ativo, .menu.ativo {
-        left: 0;
+    nav.ativo,
+    nav.menu.ativo,
+    .menu.ativo {
+        left: 0 !important;
     }
 
-    /* Abas principais (Início, ENEM, Aulas, Questões) */
+    /* 4. Abas principais (Início, ENEM, Aulas, Questões) */
     nav > a,
     .menu > a,
     .dropdown {
@@ -379,22 +395,22 @@ footer {
         cursor: pointer;
     }
 
-    /* Subabas fechadas por padrão e abrindo para baixo ao clicar */
+    /* Subabas fechadas por padrão e abrindo PARA BAIXO ao clicar */
     .dropdown-content {
-        display: none;
+        display: none !important;
         position: static !important;
         margin-top: 8px !important;
-        margin-left: 12px;
-        padding-left: 10px;
+        margin-left: 12px !important;
+        padding-left: 10px !important;
         border-left: 2px solid rgba(0, 0, 0, 0.2);
-        background-color: transparent;
-        box-shadow: none;
+        background-color: transparent !important;
+        box-shadow: none !important;
     }
 
     .dropdown.ativo .dropdown-content {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 8px !important;
     }
 
     section.imagem {
