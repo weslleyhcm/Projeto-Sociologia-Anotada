@@ -24,6 +24,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 body {
@@ -78,20 +79,28 @@ header {
     display: none;
 }
 
-/* Menu acompanha a rolagem no desktop */
-nav {
+/* Barra amarela acompanha a rolagem no desktop */
+nav.menu {
     position: sticky;
     top: 0;
     z-index: 999;
+    width: 100%;
     background-color: var(--cor4);
     padding: 10px 20px;
-    box-shadow: 0px 7px 7px black;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.links-menu {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    gap: 5px;
 }
 
-nav > a {
+.links-menu > a {
     color: black;
     padding: 10px;
     border-radius: 5px;
@@ -100,7 +109,7 @@ nav > a {
     transition-duration: 0.5s;
 }
 
-nav > a:hover {
+.links-menu > a:hover {
     background-color: var(--cor6);
 }
 
@@ -174,10 +183,10 @@ nav > a:hover {
     display: block;
 }
 
-/* No desktop, fica dentro da barra amarela à direita */
+/* Redes sociais à direita na barra amarela */
 .redes-sociais {
     margin-left: auto;
-    margin-right: 65px;
+    margin-right: 45px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -250,7 +259,7 @@ footer {
 }
 
 /* =========================================
-   MOBILE (até 768px) — VERSÃO INTEGRADA
+   MOBILE (até 768px)
    ========================================= */
 @media screen and (max-width: 768px) {
     header {
@@ -262,7 +271,7 @@ footer {
         height: auto;
     }
 
-    /* 1. Barra amarela de ponta a ponta, logo abaixo da logo e acompanhando a rolagem */
+    /* Barra amarela de ponta a ponta, abaixo da logo e acompanhando a rolagem */
     nav.menu {
         position: sticky;
         top: 0;
@@ -278,7 +287,7 @@ footer {
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
     }
 
-    /* Botão hambúrguer à esquerda, dentro da barra amarela */
+    /* Botão hambúrguer à esquerda dentro da barra amarela */
     .btn-hamburguer {
         display: flex;
         flex-direction: column;
@@ -316,7 +325,7 @@ footer {
         transform: translateY(-7.5px) rotate(-45deg);
     }
 
-    /* 2. Ícones de Instagram e YouTube na horizontal, na mesma linha e barra amarela */
+    /* Ícones sociais à direita, na horizontal e na mesma linha */
     .redes-sociais {
         margin: 0;
         display: flex;
@@ -332,7 +341,7 @@ footer {
         display: block;
     }
 
-    /* 3. Aba lateral que abre à esquerda e termina logo após "Questões" */
+    /* Aba lateral compacta: termina logo após "Questões" */
     .links-menu {
         display: flex;
         flex-direction: column;
@@ -357,7 +366,6 @@ footer {
         left: 0;
     }
 
-    /* Abas principais (Início, ENEM, Aulas, Questões) */
     .links-menu > a,
     .dropdown {
         font-size: 16px;

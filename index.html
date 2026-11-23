@@ -12,42 +12,46 @@
         <img src="Imagens/logótipo3d-sociologiaanotada1.png" alt="Logo da Sociologia Anotada" class="logo">
     </header>
 
-    <!-- Botão dos três tracinhos (aparece no mobile via CSS e é controlado pelo JS) -->
-    <button type="button" class="btn-hamburguer" aria-label="Abrir menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-
     <nav class="menu">
-        <a href="https://sociologiaanotada.com.br/">Início</a>
+        <!-- Botão hambúrguer à esquerda dentro da barra amarela (escondido no desktop) -->
+        <button type="button" class="btn-hamburguer" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-        <div class="dropdown">
-            <a href="#" class="dropbtn">ENEM</a>
-            <div class="dropdown-content">
-                <a href="enexame.html" target="_blank" rel="noopener noreferrer">Exame</a>
-                <a href="enincidencia.html" target="_blank" rel="noopener noreferrer">Incidência</a>
+        <!-- Abas de navegação: ficam na barra no desktop e viram aba lateral no mobile -->
+        <div class="links-menu">
+            <a href="https://sociologiaanotada.com.br/">Início</a>
+
+            <div class="dropdown">
+                <a href="#" class="dropbtn">ENEM</a>
+                <div class="dropdown-content">
+                    <a href="enexame.html" target="_blank" rel="noopener noreferrer">Exame</a>
+                    <a href="enincidencia.html" target="_blank" rel="noopener noreferrer">Incidência</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Aulas</a>
+                <div class="dropdown-content">
+                    <a href="aautores.html" target="_blank" rel="noopener noreferrer">Autores</a>
+                    <a href="aeixos.html" target="_blank" rel="noopener noreferrer">Eixos</a>
+                    <a href="aroteiro.html" target="_blank" rel="noopener noreferrer">Roteiro</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Questões</a>
+                <div class="dropdown-content">
+                    <a href="qautores.html" target="_blank" rel="noopener noreferrer">Autores</a>
+                    <a href="qeixos.html" target="_blank" rel="noopener noreferrer">Eixos</a>
+                    <a href="qedicao.html" target="_blank" rel="noopener noreferrer">Edição</a>
+                </div>
             </div>
         </div>
 
-        <div class="dropdown">
-            <a href="#" class="dropbtn">Aulas</a>
-            <div class="dropdown-content">
-                <a href="aautores.html" target="_blank" rel="noopener noreferrer">Autores</a>
-                <a href="aeixos.html" target="_blank" rel="noopener noreferrer">Eixos</a>
-                <a href="aroteiro.html" target="_blank" rel="noopener noreferrer">Roteiro</a>
-            </div>
-        </div>
-
-        <div class="dropdown">
-            <a href="#" class="dropbtn">Questões</a>
-            <div class="dropdown-content">
-                <a href="qautores.html" target="_blank" rel="noopener noreferrer">Autores</a>
-                <a href="qeixos.html" target="_blank" rel="noopener noreferrer">Eixos</a>
-                <a href="qedicao.html" target="_blank" rel="noopener noreferrer">Edição</a>
-            </div>
-        </div>
-
+        <!-- Ícones sociais à direita dentro da barra amarela -->
         <div class="redes-sociais">
             <a href="https://www.instagram.com/sociologiaanotada" target="_blank" rel="noopener noreferrer">
                 <img src="Imagens/Iconeinstagram9.png" alt="Instagram" class="icone-rede">
@@ -81,11 +85,11 @@
 
     <script>
         const btn = document.querySelector('.btn-hamburguer');
-        const menu = document.querySelector('nav.menu');
+        const linksMenu = document.querySelector('.links-menu');
 
-        if (btn && menu) {
+        if (btn && linksMenu) {
             btn.addEventListener('click', () => {
-                menu.classList.toggle('ativo');
+                linksMenu.classList.toggle('ativo');
                 btn.classList.toggle('ativo');
             });
         }
