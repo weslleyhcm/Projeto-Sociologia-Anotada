@@ -86,11 +86,46 @@
     <script>
         const btn = document.querySelector('.btn-hamburguer');
         const linksMenu = document.querySelector('.links-menu');
+        const navMenu = document.querySelector('nav.menu');
+
+        function posicionarMenuAbaixoDaBarra() {
+            if (!btn || !linksMenu || !navMenu) return;
+
+            if (window.innerWidth <= 768) {
+                const navRect = navMenu.getBoundingClientRect();
+                const btnRect = btn.getBoundingClientRect();
+                linksMenu.style.position = 'fixed';
+                linksMenu.style.top = `${Math.round(navRect.bottom)}px`;
+                linksMenu.style.left = `${Math.round(btnRect.left)}px`;
+            } else {
+                linksMenu.style.position = '';
+                linksMenu.style.top = '';
+                linksMenu.style.left = '';
+            }
+        }
 
         if (btn && linksMenu) {
             btn.addEventListener('click', () => {
+                const vaiAbrir = !linksMenu.classList.contains('ativo');
+                if (vaiAbrir) {
+                    posicionarMenuAbaixoDaBarra();
+                }
                 linksMenu.classList.toggle('ativo');
                 btn.classList.toggle('ativo');
+            });
+
+            window.addEventListener('scroll', () => {
+                if (linksMenu.classList.contains('ativo')) {
+                    posicionarMenuAbaixoDaBarra();
+                }
+            }, { passive: true });
+
+            window.addEventListener('resize', () => {
+                if (linksMenu.classList.contains('ativo')) {
+                    posicionarMenuAbaixoDaBarra();
+                } else if (window.innerWidth > 768) {
+                    posicionarMenuAbaixoDaBarra();
+                }
             });
         }
 

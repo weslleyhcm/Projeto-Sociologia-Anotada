@@ -345,18 +345,16 @@ footer {
         display: block;
     }
 
-    /* Caixa do menu SEMPRE logo abaixo da barra do hambúrguer/X e terminando após "Questões" */
+    /* Caixa do menu posicionada pelo script logo abaixo da barra do hambúrguer/X */
     .links-menu {
         display: none;
         flex-direction: column;
         align-items: flex-start;
         flex-wrap: nowrap;
-        position: absolute;
-        top: 100%;
-        left: 15px;
+        position: fixed;
         width: 240px;
         height: auto;
-        max-height: calc(100vh - 75px);
+        max-height: calc(100vh - 80px);
         padding: 10px 14px 12px 14px;
         background-color: var(--cor4);
         border: 1px solid rgba(0, 0, 0, 0.15);
