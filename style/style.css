@@ -259,7 +259,7 @@ footer {
 }
 
 /* =========================================
-   MOBILE (até 768px) — CAIXA AO LADO DO BOTÃO
+   MOBILE (até 768px) — CAIXA ABAIXO DO BOTÃO
    ========================================= */
 @media screen and (max-width: 768px) {
     header {
@@ -345,30 +345,30 @@ footer {
         display: block;
     }
 
-    /* Caixa do menu abre AO LADO do botão (left: 65px) e termina logo após "Questões" */
+    /* Caixa do menu abre LOGO ABAIXO da barra do hambúrguer/X e termina após "Questões" */
     .links-menu {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         flex-wrap: nowrap;
         position: fixed;
-        top: 8px;
+        top: 58px;
         left: -260px;
-        width: 215px;
+        width: 240px;
         height: auto;
-        max-height: calc(100vh - 20px);
+        max-height: calc(100vh - 70px);
         padding: 10px 14px 12px 14px;
         background-color: var(--cor4);
         border: 1px solid rgba(0, 0, 0, 0.15);
-        border-radius: 8px;
+        border-radius: 0 0 8px 8px;
         box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
         transition: left 0.28s ease;
-        z-index: 1003;
+        z-index: 1001;
         overflow-y: auto;
     }
 
     .links-menu.ativo {
-        left: 65px; /* Fica ao lado do botão de 42px (15px + 42px + 8px de respiro) */
+        left: 15px; /* Alinhada à esquerda, logo abaixo do botão hambúrguer / X */
     }
 
     .links-menu > a,
