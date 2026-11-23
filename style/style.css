@@ -243,11 +243,12 @@ section.imagem {
 
 section#img01 {
     background-image: url('../Imagens/Anotada\ Sociologia_\ Mira\ e\ Caneta.png');
-    background-position: center 75px;
+    background-position: center 45px;
 }
 
 section#img02 {
     background-image: url('../Imagens/Anotada\ Sociologiamira\ e\ Caneta2.png');
+    background-position: center 45px;
 }
 
 footer {
