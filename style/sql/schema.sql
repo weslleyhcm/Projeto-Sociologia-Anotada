@@ -1,7 +1,0 @@
-CREATE TABLE IF NOT EXISTS questoes (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    ano INTEGER NOT NULL,
-    tema TEXT NOT NULL,
-    enunciado TEXT NOT NULL,
-    gabarito CHAR(1) NOT NULL
-);
